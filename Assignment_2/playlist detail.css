@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(38, 38, 38, 0.618), rgba(0, 0, 0, 0.793)), 
+              url('Images/4429608.jpg') no-repeat center center/cover;
+}
+
+.playlist-container {
+    width: 90%;
+    max-width: 600px;
+    background: #ffffff41;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.playlist-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.playlist-cover {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.playlist-info h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.playlist-info p {
+    margin: 5px 0;
+    color: #b3b3b3;
+}
+
+.btn {
+    background-color: #1db954;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn:hover {
+    background-color: #17a749;
+}
+
+.playlist-songs h2 {
+    margin-bottom: 10px;
+}
+
+.playlist-songs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.playlist-songs li {
+    display: flex;
+    align-items: center;
+    background: #282828;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.playlist-songs img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.song-info p {
+    margin: 0;
+    color: #b3b3b3;
+}
+
+.song-info p strong {
+    color: white;
+}
+
+.remove-btn {
+    background-color: #ff4747;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.remove-btn:hover {
+    background-color: #cc3b3b;
+}

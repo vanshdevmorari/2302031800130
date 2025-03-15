@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy & Sharing Settings</title>
+    <link rel="stylesheet" href="privacy.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Privacy & Sharing Settings</h2>
+        <div class="privacy-section">
+            <h3>Privacy Settings</h3>
+            <label>
+                <input type="radio" name="privacy" value="public" checked> Public (Anyone can view and edit)
+            </label>
+            <label>
+                <input type="radio" name="privacy" value="friends"> Friends Only (Only friends can edit)
+            </label>
+            <label>
+                <input type="radio" name="privacy" value="private"> Private (Only you can edit)
+            </label>
+        </div>
+        <div class="sharing-section">
+            <h3>Share Your Playlist</h3>
+            <div class="share-box">
+                <input type="text" id="shareLink" value="https://yourmusicapp.com/playlist/12345" readonly>
+                <button onclick="copyLink()">Copy Link</button>
+            </div>
+            <p>Share this link with friends to invite them.</p>
+        </div>
+        <div class="invite-section">
+            <h3>Invite Friends</h3>
+            <input type="email" placeholder="Enter email" id="friendEmail">
+            <button onclick="sendInvite()">Send Invite</button>
+        </div>
+    </div>
+
+    <script>
+        function copyLink() {
+            let copyText = document.getElementById("shareLink");
+            copyText.select();
+            document.execCommand("copy");
+            alert("Link copied to clipboard!");
+        }
+
+        function sendInvite() {
+            let email = document.getElementById("friendEmail").value;
+            if(email) {
+                alert("Invitation sent to " + email);
+                document.getElementById("friendEmail").value = "";
+            } else {
+                alert("Please enter a valid email!");
+            }
+        }
+    </script>
+</body>
+</html>
